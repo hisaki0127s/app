@@ -79,3 +79,11 @@
     background-color: #0B0B0B;
   }
  
+ .button input[type="submit" i]{
+
+  color: white;
+  font-family: 'HGSMinchoB';
+  background: black;
+
+  
+ }
