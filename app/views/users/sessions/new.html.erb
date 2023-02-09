@@ -1,0 +1,46 @@
+<div class="ログイン">
+
+  <div class="image1">
+        <img src="/assets/デッドリフト.png" width="450" >
+  </div>
+
+  
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <div class="ログイ">
+          ログイン
+        </div>
+          <%= f.label :Eメール %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :パスワード %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :記憶する%>
+        </div>
+      <% end %>
+      
+      
+     <form>
+       <p><input class="hever" type="submit" value="ログイン"></p>
+       <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+         <%= link_to "パスワード忘れた?", new_password_path(resource_name), {class: "btn-square-pop"} %><br />
+       <% end %>
+     </form>
+     
+    <%= render "users/shared/links" %>
+
+    
+     
+   
+
+       
+  <% end %>
+</div>

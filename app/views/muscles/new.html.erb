@@ -1,0 +1,54 @@
+<h1>(GeekMuscles)</h1>
+<h3>新規投稿</h3>
+<%= form_for @muscles do |f| %>
+
+  <div class="field">
+    <%= f.label :メニュー %>
+    <%= f.text_field :menu, :size => 30 %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :部位 %>
+    <%= f.text_field :site, :size => 30 %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :方法 %>
+    <%= f.text_field :about, :size => 30 %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :時間 %>
+    <%= f.text_field :time, :size => 30 %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :インターバル %>
+    <%= f.text_field :interval, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.label :youtube_url %>
+  <%= f.text_field :youtube_url, :size => 140 %>
+   
+  <%= f.select :name, {'男性':'1', '女性':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+  </div>
+
+  <%= f.select :name2, {'５キロ以上':'1', '５キロ未満':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+
+  
+
+<%= link_to "一覧に戻る", muscles_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  menu: MyString
+  site: MyString
+  about: MyString
+  time: MyString
+  interval: MyString
+
+two:
+  menu: MyString
+  site: MyString
+  about: MyString
+  time: MyString
+  interval: MyString

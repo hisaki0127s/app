@@ -1,0 +1,36 @@
+<h1>GeekMuscles</h1>
+<h3>一覧</h3>
+<% if user_signed_in? %>
+  <% if current_user == @user || current_user.admin? %>
+   <%= link_to "新規投稿へ", new_muscle_path %>
+  <% end %>
+<% end %>
+<div class="muscles-container">
+<% if user_signed_in? %>
+   <%= link_to "マイページへ", user_path(current_user.id) %>
+<% end %>
+  <% @muscles.each do |t| %>
+    <div class="muscle">
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.user.email %>
+      <%= t.menu %>
+      
+
+      <%= link_to "詳細へ", muscle_path(t.id) %>
+  <% if user_signed_in? %>
+    <% if current_user == @user || current_user.admin? %>
+      <%= link_to "編集する", edit_muscle_path(t.id) %>
+      <%= button_to "削除する", muscle_path(t.id), method: :delete %>
+
+    <% end %>
+  <% end %>
+
+      <%= link_to t.user.name, user_path(t.user.id) %> 
+      <%= t.user.email %>
+
+      
+    </div>
+  <% end %>
+</div>
+
+

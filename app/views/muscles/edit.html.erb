@@ -1,0 +1,27 @@
+<%= form_for @muscle do |f| %>
+    <%= f.label :menu %>
+    <%= f.text_field :menu, :size => 140 %>
+    </br> 
+    <%= f.label :site %>
+    <%= f.text_field :site, :size => 140 %> 
+    </br>
+    <%= f.label :about %>
+    <%= f.text_field :about, :size => 140 %>
+    </br>
+    <%= f.label :time %>
+    <%= f.text_field :time, :time => 140 %>
+    </br>
+    <%= f.label :interval %>
+    <%= f.text_field :interval, :interval => 140 %>
+    </br>
+    <%= f.label :image %>
+    <%= f.text_field :image, :image => 140 %>
+    </br>
+    <%= f.label :find_youtube_url %>
+    <%= f.text_field :youtube_url, :youtube_url => 140 %>
+    
+    
+
+
+    <%= f.submit "編集する" %>
+  <% end %>

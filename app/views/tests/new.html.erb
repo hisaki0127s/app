@@ -1,0 +1,28 @@
+<%= form_for(@test, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="container-sindan">
+        <div class="row">
+            <div class="col-12">
+                <p>Question1. 性別は…</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>男性</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>女性</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question2. 何キロ痩せたいか</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>５キロ以上</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>５キロ未満</p>
+        </div>
+    </div>
+            <div class="sindanbotan">
+                <%= f.submit "あなたにオススメの筋トレは！！" %>
+            </div>
+<% end %>
+ 
