@@ -1,10 +1,6 @@
 <div class="tago">
   
-  <% if user_signed_in? %>
-    <% if current_user == @user || current_user.admin? %>
-    <%= link_to "新規投稿へ", new_muscle_path %>
-    <% end %>
-  <% end %>
+
   <div class="tago2">
     <div class="text">
       <h1>・正月太りや長期期間での休みから</h1>
@@ -16,12 +12,12 @@
       <h1>　理想の体系を目指そう！</h1>
     </div>
     <div class="image">
-    <img src='<%= asset_path('筋トレ.jpg') %>'width="450"/>
+    <img src='<%= asset_path('筋トレ.jpg') %>'/>
     </div>
   </div>
   <div class="tago3">
     <div class="image2">
-    <img src='<%= asset_path('ダイエット.jpeg') %>'width="450"/>
+    <img src='<%= asset_path('ダイエット.jpeg') %>'/>
     </div>
     <div class="text2">
       <h1>男性か女性、</h1>
