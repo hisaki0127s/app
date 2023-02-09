@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2023_01_17_131427) do
     t.integer "user_id"
     t.string "image"
     t.string "youtube_url"
-    t.string "name"
-    t.string "name2"
+    t.integer "name"
+    t.integer "name2"
   end
 
   create_table "tags", force: :cascade do |t|
