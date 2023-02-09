@@ -1,0 +1,21 @@
+databases:
+  - name: hisakimuscle-site_DB
+    databaseName: postgres://hisakimuscle_site_db_user:Yi7GhQO3FHnXAQmzbygrfdARX625uzQt@dpg-cfibfjkgqg40klmv1g5g-a/hisakimuscle_site_db
+    user: hisakimuscle-site
+    region: singapore
+
+services:
+  - type: web
+    name: hisakimuscle-site
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hisakimuscle-site_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
