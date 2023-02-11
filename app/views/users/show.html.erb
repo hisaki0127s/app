@@ -5,6 +5,11 @@
  <p>プロフィール : <%= @user.profile %></p>
 
 
+ <% if current_user.id == 1 %>
+ <%= link_to "新規投稿ページへ", new_muscle_path %> 
+<% end %>
+
+
 
 
   <div class="診断を始める">

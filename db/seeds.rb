@@ -13,3 +13,10 @@ Muscle.create([
   { name: '５キロ未満' }
  
 ])
+
+User.create!(
+  email: 'admin@example.com',
+  password: 'admin',
+  password_confirmation: 'admin',
+  admin: true
+)
