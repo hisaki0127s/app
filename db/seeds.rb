@@ -14,9 +14,4 @@ Muscle.create([
  
 ])
 
-User.create!(
-  email: 'admin@example.com',
-  password: 'admin',
-  password_confirmation: 'admin',
-  admin: true
-)
+
