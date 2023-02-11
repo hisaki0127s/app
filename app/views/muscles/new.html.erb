@@ -39,10 +39,10 @@
   <%= f.label :youtube_url %>
   <%= f.text_field :youtube_url, :size => 140 %>
    
-  <%= f.select :name, {'男性':'1', '女性':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+  <%= f.select :name, {'男性':'あ', '女性':'い'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
   </div>
 
-  <%= f.select :name2, {'５キロ以上':'1', '５キロ未満':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+  <%= f.select :name2, {'５キロ以上':'あ', '５キロ未満':'い'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
   </div>
 
   <%= f.submit "投稿する" %>
