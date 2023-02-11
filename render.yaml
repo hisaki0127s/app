@@ -1,6 +1,6 @@
 databases:
   - name: hisakimuscle-site2_DB
-    databaseName: postgres://hisakimuscle_site2_db_user:8KWboc7Ub3AU7Tns5EYPFXWhGQiz1N3I@dpg-cfjnirha6gductjks7cg-a/hisakimuscle_site2_db
+    databaseName: hisakimuscle_site2_db
     user: hisakimuscle-site2
     region: singapore
 
