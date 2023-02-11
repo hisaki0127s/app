@@ -8,15 +8,15 @@ class MusclesController < ApplicationController
     end
     
     def men6
-        @muscles = Muscle.where("name=あ").where("name2=あ")
+        @muscles = Muscle.where(name: 'あ', name2: 'あ')
     end
 
     def women5
-        @muscles = Muscle.where("name=い").where("name2=い")
+        @muscles = Muscle.where(name: 'い', name2: 'い')
     end
 
     def women6
-        @muscles = Muscle.where("name=い").where("name2=あ")
+        @muscles = Muscle.where(name: 'い', name2: 'あ')
     end
     
     def index
