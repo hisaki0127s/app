@@ -1,12 +1,12 @@
 databases:
   - name: hisakimuscle-site2_DB
     databaseName: hisakimuscle_site2_db
-    user: hisakimuscle-site2
+    user: app
     region: singapore
 
 services:
   - type: web
-    name: hisakimuscle-site2
+    name: app
     env: ruby
     region: singapore
     plan: free
