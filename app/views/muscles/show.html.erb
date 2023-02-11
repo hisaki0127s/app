@@ -15,11 +15,11 @@
 <%= link_to "一覧に戻る", :back%>
 
 <% if user_signed_in? %>
-   <% if current_user == @user || current_user.admin? %>
-     <%= link_to "編集する", edit_muscle_path(@muscle.id) %>
+   
+   <% if current_user.id == 1 %> 
+ <%= link_to "編集する", edit_muscle_path(@muscle.id) %>
      <%= button_to "削除する", muscle_path(@muscle.id), method: :delete %>
-
-   <% end %>
+<% end %>
 <% end %>
 
 <% @muscle.tags.each do |tag| %>
