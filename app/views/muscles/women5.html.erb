@@ -1,19 +1,21 @@
-<% @muscles.each do |t| %>
-    <div class="muscles">
-      <%= image_tag t.image_url, size: "250x200" if t.image? %>
-     
-      <%= t.menu %>
+<div class ="詳細">
+  <% @muscles.each do |t| %>
+      <div class="muscles">
+        <%= image_tag t.image_url, size: "250x200" if t.image? %>
       
+        <%= t.menu %>
+        
 
-      <%= link_to "詳細へ", muscle_path(t.id) %>
+        <%= link_to "詳細へ", muscle_path(t.id) %>
 
-   
-     <% if user_signed_in? %>
+    
+      <% if user_signed_in? %>
 
-    <% if current_user.id == 1 %> 
-      <%= link_to "編集する", edit_muscle_path(t.id) %>
-      <%= button_to "削除する", muscle_path(t.id), method: :delete %>
+      <% if current_user.id == 1 %> 
+        <%= link_to "編集する", edit_muscle_path(t.id) %>
+        <%= button_to "削除する", muscle_path(t.id), method: :delete %>
+        <% end %>
       <% end %>
+    
     <% end %>
-  
-  <% end %>
+</div>
