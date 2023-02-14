@@ -2,7 +2,9 @@
     color: white;
     font-family: 'HGSMinchoB';
     display: flex;
-    height: 500px;
+    height: 600px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .詳細 a{

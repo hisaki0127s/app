@@ -1,12 +1,9 @@
 <div class ="詳細">
   <% @muscles.each do |t| %>
       <div class="muscles">
-        <%= image_tag t.image_url, size: "250x200" if t.image? %>
-      
-        <%= t.menu %>
-        
-
-        <%= link_to "詳細へ", muscle_path(t.id) %>
+       <%= t.menu %>
+       <%= image_tag t.image_url, size: "250x200" if t.image? %>
+       <%= link_to "詳細へ", muscle_path(t.id) %>
       </div>  
     
   <% if user_signed_in? %>
