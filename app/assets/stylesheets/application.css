@@ -87,3 +87,11 @@
 
   
  }
+
+ .logout {
+  background-color: black;
+  color:white;
+  font-family: 'HGSMinchoB';
+  font-size: 16px;
+
+ }

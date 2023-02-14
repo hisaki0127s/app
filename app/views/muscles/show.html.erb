@@ -1,5 +1,5 @@
 <div class ="詳細後">
-  <h3>詳細</h3>
+  <h1>詳細</h1>
   <div class="muscle">
     <p><%= @muscle.menu %></p>
     <p><%= @muscle.site %></p>
@@ -9,7 +9,7 @@
 
 
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= find_youtube_url(@muscle.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="360" height="200" src="https://www.youtube.com/embed/<%= find_youtube_url(@muscle.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
   <%= link_to "一覧に戻る", :back%>
